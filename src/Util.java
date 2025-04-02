@@ -50,6 +50,8 @@ public class Util {
                     case 2:
                         listarBilhete();
                         break;
+                    case 3:
+                        removerBilhete();
                 }
             }
         }while(opcao != 4);
@@ -150,6 +152,18 @@ public class Util {
         showMessageDialog(null, cpf + " Não encontrado");
         return -1;
 
+    }
+
+    private void removerBilhete(){
+       int resposta;
+        int posicao = pesquisar();
+        if(posicao != -1){
+            resposta = showConfirmDialog(null, "Tem certeza que deseja remover o bilhete?");
+            if(resposta == YES_OPTION){
+                index--;
+                bilhete[posicao] = bilhete[index];
+            }
+        }
     }
 }
 

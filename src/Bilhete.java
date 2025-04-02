@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class Bilhete {
     double saldo;
-    static final double tarifaBase = 5.20;
+    static final double tarifaBase = 5.00;
     long numero;
     Usuario usuario;
 
